@@ -7,7 +7,7 @@ const {
 } = props
 
 
-console.log(apiData)
+
 
 if(apiData !== undefined){
     return (
