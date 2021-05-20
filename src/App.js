@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
 
-const [apiData, setApiData] = useState([])
+const [apiData, setApiData] = useState()
 
 console.log('api data')
 console.log(apiData)
@@ -32,7 +32,8 @@ useEffect(() =>{
       apiData={apiData}
       />
     </div>
-  );
+  ); 
+
 }
 
 export default App;
