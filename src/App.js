@@ -26,13 +26,14 @@ const handleSetEndDate = (e) =>{
 const handleSearchApi = (e) =>{
   e.preventDefault()
   if(startDate !== undefined && endDate !== undefined){
-    fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=DEMO_KEY`)
+    fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=DEMO_KEY`)
     .then(response => response.json())
     .then(data => setApiData(data))
+    console.log(apiData)
   } else{
-    console.log('this')
-    let x = document.getElementsByClassName("noDate")
-    x.styles.display = 'none'
+    console.log('no api pull')
+    // let x = document.getElementsByClassName("noDate")
+    // x.styles.display = 'none'
   }
 
 

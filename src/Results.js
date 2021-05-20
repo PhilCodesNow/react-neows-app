@@ -19,7 +19,8 @@ if(apiData !== undefined){
                         array.map(neObject =>{
                         return (
                             <div key={neObject.name}>
-                            {neObject.name}
+                            <span>{neObject.name}</span>
+                            <span>{neObject.close_approach_data[0].close_approach_date}</span>
                             </div>
                         )
                     }))
