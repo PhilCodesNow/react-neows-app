@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import Discription from './Description';
 import Results from './Results';
 import SearchForm from './SearchForm';
 import './App.css';
+import Description from './Description';
 
 
 
@@ -48,7 +50,9 @@ const handleSearchApi = (e) =>{
 
   return (
     <div className="App">
-      REACT
+    <div className="app">
+      <h1>Near Earth Object Web App</h1>
+      <Description/>
       <SearchForm
       startDate={startDate}
       endDate={endDate}
@@ -62,6 +66,8 @@ const handleSearchApi = (e) =>{
       <Results
       apiData={apiData}
       />
+    </div>
+
     </div>
   ); 
 

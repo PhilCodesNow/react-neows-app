@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import './SearchForm.css';
 
 function SearchForm(props) {
 
@@ -11,11 +13,11 @@ const {
 } = props
     return (
         <div className="searchForm">
-            Search Form
+            Search Dates
             <form onSubmit={handleSearchApi}>
-                <label>Start Date</label>
+                <label>Start Date: </label>
                 <input type="date" onInput={handleSetStartDate}></input>
-                <label>End Date</label>
+                <label>End Date: </label>
                 <input type="date" onInput={handleSetEndDate}></input>
                 <input type="submit" value="Search!"></input>
             </form>
