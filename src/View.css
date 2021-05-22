@@ -4,4 +4,22 @@
     top: 20em;
     right: 15em;
     left: 15em;
+    padding: 1em;
+    border-radius: 25px;
+    font-size: 1.5em;
+}
+.view__header{
+    
+}
+.view button{
+    font-size: 1.5em;
+    margin-top: 1em;
+    padding: .4em;
+    border-radius: 25px;
+    background-color: rgb(234, 235, 235);
+}
+.view button:hover{
+    cursor: pointer;
+    background-color: rgb(171, 189, 196);
+    border: 2px solid rgb(234, 235, 235)
 }

@@ -8,12 +8,13 @@ const {
     apiData
 } = props
 
-const [selectedTank, setSelectedTank] = useState([])
+const [selectedNeo, setSelectedNeo] = useState()
 
-const handleSelectTank = (neo) =>{
-    console.log('s T')
-    console.log(neo.name)
-    setSelectedTank(neo)
+const handleSelectNeo = (neo) =>{
+    setSelectedNeo(neo)
+}
+const handleUnselectNeo = () =>{
+    setSelectedNeo()
 }
 
 if(apiData !== undefined){
@@ -35,7 +36,7 @@ if(apiData !== undefined){
                                 </div>
                                 <div id="link">
                                 <a href='#'
-                                onClick={() => handleSelectTank(neObject)}>More</a>
+                                onClick={() => handleSelectNeo(neObject)}>More</a>
                                 </div>
 
                             </div>
@@ -45,7 +46,8 @@ if(apiData !== undefined){
             }
             </div>
             <View
-            selectedTank={selectedTank}
+            selectedNeo={selectedNeo}
+            handleUnselectNeo={handleUnselectNeo}
             />
         </div>
     )

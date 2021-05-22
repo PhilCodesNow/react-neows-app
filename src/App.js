@@ -43,7 +43,6 @@ const handleSearchApi = (e) =>{
     fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=DEMO_KEY`)
     .then(response => response.json())
     .then(data => setApiData(data))
-    console.log(apiData)
     setNoSearch(true)
   } else{
     console.log('no api pull')
