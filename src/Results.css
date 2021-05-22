@@ -1,7 +1,6 @@
 .results{
     margin: 0 auto;
     text-align: center;
-
 }
 .results__box{
     width: 70%;
@@ -15,6 +14,13 @@
     padding: .2em 0;
     display: flex;
     justify-content: space-between;
+}
+.results__box__div div{
+    width: 30%;
+    text-align: left;
+}
+#link{
+    width: 10%;
 }
 .results__box__div:nth-child(odd){
     background-color: rgb(207, 216, 218);
