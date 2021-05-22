@@ -13,3 +13,13 @@
     padding: 1em;
     margin: 0;
 }
+.Date{
+    display: none;
+}
+.noDate{
+    display:block;
+    position: fixed;
+    top: 12em;
+    left: 40%;
+
+}

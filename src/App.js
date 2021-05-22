@@ -13,23 +13,27 @@ const [apiData, setApiData] = useState()
 const [startDate, setStartDate] = useState()
 const [endDate, setEndDate] = useState()
 const [descriptionClose, setDescriptionClose] = useState(false)
+const [noSearch, setNoSearch] = useState(true)
 
 const handleCloseDescription = (e) =>{
-  console.log('description')
   setDescriptionClose(true)
 }
 
 
 const handleSetStartDate = (e) =>{
-  console.log('handlestart')
   setStartDate(e.target.value)
-  console.log(startDate)
 }
 
 const handleSetEndDate = (e) =>{
-  console.log('handleend')
   setEndDate(e.target.value)
-  console.log(endDate)
+}
+
+let noSearchClass
+
+if(noSearch === true){
+  noSearchClass = 'Date'
+} else{
+  noSearchClass = 'noDate'
 }
 
 const handleSearchApi = (e) =>{
@@ -39,10 +43,10 @@ const handleSearchApi = (e) =>{
     .then(response => response.json())
     .then(data => setApiData(data))
     console.log(apiData)
+    setNoSearch(true)
   } else{
     console.log('no api pull')
-    // let x = document.getElementsByClassName("noDate")
-    // x.styles.display = 'none'
+    setNoSearch(false)
   }
 
 
@@ -70,7 +74,7 @@ const handleSearchApi = (e) =>{
       handleSetEndDate={handleSetEndDate}
       handleSearchApi={handleSearchApi}
       />
-      <div className="noDate">
+      <div className={noSearchClass}>
         please select a start and end date
       </div>
       <Results
