@@ -28,3 +28,6 @@
     background-color: rgb(235, 238, 239);
     border: solid 2px rgb(194, 219, 227);
 }
+.app__description__close{
+    display: none;
+}

@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import Discription from './Description';
+import { useState } from 'react';
 import Results from './Results';
 import SearchForm from './SearchForm';
-import './App.css';
 import Description from './Description';
+import './App.css';
+
 
 
 
@@ -12,6 +12,13 @@ function App() {
 const [apiData, setApiData] = useState()
 const [startDate, setStartDate] = useState()
 const [endDate, setEndDate] = useState()
+const [descriptionClose, setDescriptionClose] = useState(false)
+
+const handleCloseDescription = (e) =>{
+  console.log('description')
+  setDescriptionClose(true)
+}
+
 
 const handleSetStartDate = (e) =>{
   console.log('handlestart')
@@ -52,7 +59,10 @@ const handleSearchApi = (e) =>{
     <div className="App">
     <div className="app">
       <h1>Near Earth Object Web App</h1>
-      <Description/>
+      <Description
+      className="app__description"
+      descriptionClose={descriptionClose}
+      handleCloseDescription={handleCloseDescription}/>
       <SearchForm
       startDate={startDate}
       endDate={endDate}
