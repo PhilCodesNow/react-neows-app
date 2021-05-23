@@ -1,21 +1,22 @@
 .view{
     background-color: rgb(171, 189, 196);
     position: fixed;
-    top: 20em;
-    right: 15em;
-    left: 15em;
+    top: 17em;
+    right: 10em;
+    left: 10em;
     padding: 1em;
     border-radius: 25px;
     font-size: 1.5em;
 }
-.view__header{
-    
+.view__div{
+    margin: .3em 0;
+    text-align: left;
 }
 .view button{
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-top: 1em;
-    padding: .4em;
-    border-radius: 25px;
+    padding: .4em 1em;
+    border-radius: 35px;
     background-color: rgb(234, 235, 235);
 }
 .view button:hover{
