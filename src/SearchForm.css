@@ -2,10 +2,12 @@
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    font-size: 2em;
 }
 .searchForm form input[type=date]{
     margin-top: 1em;
     margin-right: 1em;
+    font-size: .8em;
 }
 .searchForm form input[type=submit]{
     display: block;

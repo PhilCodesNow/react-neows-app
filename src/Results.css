@@ -5,9 +5,10 @@
 .results__box{
     width: 70%;
     margin: 0 auto;
+    text-align: center;
     background-color: rgb(235, 238, 239);
     padding: .5em;
-    height: 60vh;
+    height: 30vh;
     overflow: scroll;
 }
 .results__box__div{
@@ -16,11 +17,12 @@
     justify-content: space-between;
 }
 .results__box__div div{
-    width: 30%;
+    /* width: 45%; */
     text-align: left;
 }
 #link{
-    width: 10%;
+    /* width: 10%; */
+    text-align: right;
 }
 .results__box__div:nth-child(odd){
     background-color: rgb(207, 216, 218);

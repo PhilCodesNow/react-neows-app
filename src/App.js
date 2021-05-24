@@ -12,7 +12,6 @@ function App() {
 
 const [apiData, setApiData] = useState()
 const [startDate, setStartDate] = useState()
-const [endDate, setEndDate] = useState()
 const [descriptionClose, setDescriptionClose] = useState(false)
 const [noSearch, setNoSearch] = useState(true)
 
@@ -25,10 +24,6 @@ const handleSetStartDate = (e) =>{
   setStartDate(e.target.value)
 }
 
-const handleSetEndDate = (e) =>{
-  setEndDate(e.target.value)
-}
-
 let noSearchClass
 
 if(noSearch === true){
@@ -39,8 +34,8 @@ if(noSearch === true){
 
 const handleSearchApi = (e) =>{
   e.preventDefault()
-  if(startDate !== undefined && endDate !== undefined){
-    fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=DEMO_KEY`)
+  if(startDate !== undefined){
+    fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${startDate}&api_key=DEMO_KEY`)
     .then(response => response.json())
     .then(data => setApiData(data))
     setNoSearch(true)
@@ -69,13 +64,11 @@ const handleSearchApi = (e) =>{
       handleCloseDescription={handleCloseDescription}/>
       <SearchForm
       startDate={startDate}
-      endDate={endDate}
       handleSetStartDate={handleSetStartDate}
-      handleSetEndDate={handleSetEndDate}
       handleSearchApi={handleSearchApi}
       />
       <div className={noSearchClass}>
-        please select a start and end date
+        please select a date
       </div>
       <Results
       apiData={apiData}

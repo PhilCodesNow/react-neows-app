@@ -2,15 +2,15 @@
     background-color: rgb(171, 189, 196);
     position: fixed;
     top: 17em;
-    right: 10em;
-    left: 10em;
+    right: 15em;
+    left: 15em;
     padding: 1em;
     border-radius: 25px;
     font-size: 1.5em;
 }
 .view__div{
     margin: .3em 0;
-    text-align: left;
+    text-align: center;
 }
 .view button{
     font-size: 1.4em;

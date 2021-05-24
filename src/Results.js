@@ -54,7 +54,7 @@ if(apiData !== undefined){
 } else {
     return(
         <div className="results">
-            Select your dates to search!
+            Select your date and search!
         </div>
     )
 }

@@ -8,17 +8,18 @@ const {
     startDate,
     endDate,
     handleSetStartDate,
-    handleSetEndDate,
     handleSearchApi
 } = props
     return (
         <div className="searchForm">
-            Search Dates
+            <h3>
+            Search Date
+            </h3>
+            
             <form onSubmit={handleSearchApi}>
-                <label>Start Date: </label>
+                <label>Date: </label>
                 <input type="date" onInput={handleSetStartDate}></input>
-                <label>End Date: </label>
-                <input type="date" onInput={handleSetEndDate}></input>
+
                 <input type="submit" value="Search!"></input>
             </form>
         </div>
